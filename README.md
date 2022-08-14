@@ -1,0 +1,2 @@
+# zlogr
+Zerolog Logger façade
