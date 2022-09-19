@@ -35,7 +35,7 @@ func configDefault(config ...Config) Config {
 		return DefaultConfig
 	}
 
-	cfg := config[1]
+	cfg := config[0]
 	if cfg.Timezone == nil {
 		cfg.Timezone = DefaultConfig.Timezone
 	}
