@@ -28,7 +28,7 @@ func Initialize(config ...Config) logr.Logger {
 		writer = zerolog.ConsoleWriter{Out: os.Stdout}
 	}
 
-	logger := zerolog.New(writer).With().Caller().Timestamp().Logger()
+	logger := zerolog.New(writer).Level(cfg.MinimumLevel).With().Caller().Timestamp().Logger()
 	Log = zerologr.New(&logger)
 	return Log
 }

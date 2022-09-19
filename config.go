@@ -1,12 +1,20 @@
 package zlogr
 
-import "time"
+import (
+	"github.com/rs/zerolog"
+	"time"
+)
 
 type Config struct {
 	// IsPrettyLogging defines when to use pretty logging instead of structured logging.
 	//
 	// Optional. Default: false
 	IsPrettyLogging bool
+
+	// MinimumLevel defines minimum logging level used by this instance.
+	//
+	// Optional. Default: Debug
+	MinimumLevel zerolog.Level
 
 	// Timezone defines timezone that will be used in logging.
 	//
